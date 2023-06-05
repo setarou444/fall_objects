@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "fall-objects",
+  "version": "1.0.0",
+  "description": "桜の花びらや雪を降らせます",
+  "action": {
+    "default_popup": "setting_popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "css": [
+        "css/fall_objects_style.css"
+      ],
+      "js": [
+        "js/action.js",
+        "js/three.min.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "img/*"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ]
+}

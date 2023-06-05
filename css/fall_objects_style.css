@@ -1,0 +1,12 @@
+#myExtension-Canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: fixed;
+    overflow: hidden;
+    z-index: 10000;
+    top: 0;
+    /* この要素のイベント無効化 これで最前面でも後ろの要素を選択できるようになる */
+    pointer-events: none;
+}
